@@ -49,37 +49,47 @@
         .form-group input[type="submit"]:hover {
             background-color: #45a049;
         }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="form-container">
     <h2>Editar Perfil</h2>
-    <form>
+    <form id="form-editar-perfil">
         <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
+            <p id="error-nombre" class="error-message"></p>
         </div>
         
         <div class="form-group">
             <label for="correo">Correo Electrónico:</label>
             <input type="email" id="correo" name="correo" required>
+            <p id="error-correo" class="error-message"></p>
         </div>
         
         <div class="form-group">
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>
+            <p id="error-contrasena" class="error-message"></p>
         </div>
         
         <!-- Otros campos del usuario -->
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono">
+            <p id="error-telefono" class="error-message"></p>
         </div>
         
         <div class="form-group">
             <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
             <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            <p id="error-fecha_nacimiento" class="error-message"></p>
         </div>
         
         <div class="form-group">
@@ -87,6 +97,8 @@
         </div>
     </form>
 </div>
+
+<script src="script-editar-perfil.js"></script>
 
 </body>
 </html>

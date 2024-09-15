@@ -6,20 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Recuperación de Contraseña</title>
 </head>
 
 <body>
     <div class="container-form-recuperacion">
-        <form class="formulario-recuperacion">
-            <h2 class="titulo-recuperacion">Recuperación de Contraseña</h2> 
+        <form id="form-recuperacion" class="formulario-recuperacion">
+            <h2 class="titulo-recuperacion">Recuperación de Contraseña</h2>
             <p class="instrucciones-recuperacion">Ingresa tu nombre de usuario o correo electrónico para recibir un enlace de restablecimiento de contraseña.</p>
-            <input type="text" class="input-recuperacion" placeholder="Nombre de Usuario o Correo Electrónico">
-            <input type="button" class="boton-recuperacion" value="Solicitar Correo de Recuperación">
+            <input type="text" id="email-recuperacion" class="input-recuperacion" placeholder="Nombre de Usuario o Correo Electrónico">
+            <input type="button" id="btn-recuperacion" class="boton-recuperacion" value="Solicitar Correo de Recuperación">
+            <p id="mensaje-error" class="mensaje-error"></p>
         </form>
     </div>
     <script src="script.js"></script>

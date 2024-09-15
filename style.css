@@ -376,3 +376,9 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
