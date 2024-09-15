@@ -1,0 +1,38 @@
+<p>login works!</p>
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+    <input
+      type="text"
+      name="username"
+      placeholder="Nombre de Usuario"
+      required
+      [(ngModel)]="user.username"
+      #username="ngModel"
+    />
+    <div *ngIf="username.invalid && username.touched" class="error">
+      Nombre de usuario es requerido.
+    </div>
+
+    <input
+      type="password"
+      name="password"
+      placeholder="Contraseña"
+      required
+      [(ngModel)]="user.password"
+      #password="ngModel"
+    />
+    <div *ngIf="password.invalid && password.touched" class="error">
+      Contraseña es requerida.
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+  </form>
+
+  <div class="link">
+    <a routerLink="/recuperar-cuenta">¿Olvidaste tu cuenta?</a>
+  </div>
+  <div class="link">
+    <a routerLink="/register">Registrarse</a>
+  </div>
+</div>
