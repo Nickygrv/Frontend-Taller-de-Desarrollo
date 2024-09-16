@@ -1,20 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
-  user = {
-    nombre: '',
-    apellido: '',
-    ci: '',
-    email: '',
+export class RegisterComponent implements OnInit {
+  form: any = {
+    username: null,
+    email: null,
+    password: null
   };
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
 
-  onRegister() {
-    // Aquí podrías implementar la lógica para registrar al usuario
-    console.log('Registro completado', this.user);
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    const { username, email, password } = this.form;
+
+    this.authService.register(username, email, password).subscribe({
+      next: data => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+      },
+      error: err => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+      }
+    });
   }
 }
