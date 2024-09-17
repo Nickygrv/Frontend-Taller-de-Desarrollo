@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la vista */
+  }
+  
+  .card-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .profile-picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre la foto y el resto del contenido */
+  }
+  
+  .profile-picture img {
+    width: 120px; /* Tamaño de la foto */
+    height: 120px; /* Tamaño de la foto */
+    border-radius: 50%; /* Hace la foto circular */
+    object-fit: cover; /* Mantiene la proporción y cubre el área del círculo */
+  }
+  
+  .edit-photo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #007bff; /* Botón azul para que sea visible */
+    color: white;
+    border: none;
+  }
+  

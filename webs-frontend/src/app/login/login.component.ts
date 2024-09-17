@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
 
+  emailNotExistsMessage: string = '';
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
@@ -44,6 +45,20 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = true;
       }
     });
+    this.authService.verificarCorreo(this.form.email).subscribe(
+      (data) => {
+        if (!data.registrado) {
+          this.emailNotExistsMessage = 'Este correo no está vinculado a ninguna cuenta.';
+        } else {
+          this.emailNotExistsMessage = '';
+          // Continuar con el inicio de sesión
+          console.log('Iniciar sesión exitosamente');
+        }
+      },
+      (error) => {
+        console.error('Error en la verificación de correo', error);
+      }
+    );
   }
 
   reloadPage(): void {

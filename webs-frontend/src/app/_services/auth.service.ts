@@ -32,4 +32,22 @@ export class AuthService {
   verificarCorreo(email: string): Observable<any> {
     return this.http.post(AUTH_API + 'verificar-correo', { email }, httpOptions);
   }
+
+  resetPassword(email: string): Observable<any> {
+    return this.http.post(AUTH_API + 'reset-password', {
+      email
+    }, httpOptions);
+  }
+  
+  getUserProfile(): Observable<any> {
+    return this.http.get(AUTH_API + 'profile', httpOptions);
+  }
+
+  updateUserProfile(profileData: any): Observable<any> {
+    return this.http.put(AUTH_API + 'profile', profileData, httpOptions);
+  }
+  
+  updateProfilePicture(formData: FormData): Observable<any> {
+    return this.http.post(AUTH_API + 'profile/picture', formData);
+  }
 }

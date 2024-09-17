@@ -9,6 +9,8 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-contrasena.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: 'recuperar-contrasena', component: RecuperarContrasenaComponent },
+  { path: 'perfil', component: PerfilComponent },
+  { path: 'editar-perfil', component: EditarPerfilComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

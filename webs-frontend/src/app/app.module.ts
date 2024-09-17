@@ -15,7 +15,10 @@ import { BoardUserComponent } from './board-user/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-contrasena.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +29,16 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    RecuperarContrasenaComponent
+    RecuperarContrasenaComponent,
+    PerfilComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

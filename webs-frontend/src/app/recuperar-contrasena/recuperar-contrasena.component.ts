@@ -41,6 +41,16 @@ export class RecuperarContrasenaComponent {
         console.error('Error en la verificación de correo', error);
       }
     );
+    if (this.form.email) {
+      this.authService.resetPassword(this.form.email).subscribe({
+        next: (data) => {
+          this.successMessage = 'Correo enviado con éxito';
+        },
+        error: (err) => {
+          this.errorMessage = 'Error al enviar el correo. Inténtalo de nuevo';
+        }
+      });
+    }
   }
 }
 

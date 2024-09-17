@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card card-container mx-auto mt-5">
+      <div class="card-body">
+        <div class="profile-picture">
+          <img [src]="user.profilePictureUrl || 'default-profile.png'" alt="Profile Picture" class="img-thumbnail"/>
+          <button (click)="onFileChange($event)" class="btn btn-secondary edit-photo-btn">
+            <i class="fa fa-pencil"></i>
+          </button>
+        </div>
+        <h3>{{ user.name }} {{ user.surname }}</h3>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Cell:</strong> {{ user.cell }}</p>
+        <button (click)="goToEditProfile()" class="btn btn-primary">Editar Datos</button>
+      </div>
+    </div>
+  </div>
+  
