@@ -50,4 +50,7 @@ export class AuthService {
   updateProfilePicture(formData: FormData): Observable<any> {
     return this.http.post(AUTH_API + 'profile/picture', formData);
   }
+  deleteUserAccount(data: any): Observable<any> {
+    return this.http.post(AUTH_API + 'delete-account', data, httpOptions);
+  }
 }

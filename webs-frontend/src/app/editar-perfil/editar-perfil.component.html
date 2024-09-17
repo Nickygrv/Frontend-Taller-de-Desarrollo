@@ -17,8 +17,23 @@
             <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="alert alert-danger">
               Nombre es requerido
             </div>
+            <label for="lastname">Apellido</label>
+            <input type="text" id="lastname" class="form-control" formControlName="lastname" />
+            <div *ngIf="userForm.get('lastname')?.invalid && userForm.get('lastname')?.touched" class="alert alert-danger">
+              Apellido es requerido
+            </div>
+            <label for="cell">Celular</label>
+            <input type="text" id="cell" class="form-control" formControlName="cell" />
+            <div *ngIf="userForm.get('cell')?.invalid && userForm.get('cell')?.touched" class="alert alert-danger">
+              Celular es requerido
+            </div>
+            <label for="Username">Username</label>
+            <input type="text" id="cell" class="form-control" formControlName="Username" />
+            <div *ngIf="userForm.get('Username')?.invalid && userForm.get('Username')?.touched" class="alert alert-danger">
+              Username es requerido
+            </div>
           </div>
-          <!-- Otros campos del formulario -->
+          
           <div class="form-group">
             <button type="button" (click)="showConfirmationDialog()" class="btn btn-secondary">Cambiar Foto</button>
           </div>
