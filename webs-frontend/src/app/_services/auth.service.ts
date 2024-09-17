@@ -28,4 +28,8 @@ export class AuthService {
       password
     }, httpOptions);
   }
+
+  verificarCorreo(email: string): Observable<any> {
+    return this.http.post(AUTH_API + 'verificar-correo', { email }, httpOptions);
+  }
 }

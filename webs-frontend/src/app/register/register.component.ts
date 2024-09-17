@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
-
+  emailExistsMessage: string = '';
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -35,5 +35,19 @@ export class RegisterComponent implements OnInit {
         this.isSignUpFailed = true;
       }
     });
+    this.authService.verificarCorreo(this.form.email).subscribe(
+      (data) => {
+        if (data.registrado) {
+          this.emailExistsMessage = 'Este correo ya está registrado.';
+        } else {
+          this.emailExistsMessage = '';
+          // Continuar con el registro
+          console.log('Registrar nuevo usuario');
+        }
+      },
+      (error) => {
+        console.error('Error en la verificación de correo', error);
+      }
+    );
   }
 }
