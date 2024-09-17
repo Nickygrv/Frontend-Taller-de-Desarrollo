@@ -74,6 +74,11 @@
         <button class="btn btn-primary btn-block">Sign Up</button>
       </div>
 
+      <div class="redirect-container">
+        <p class="redirect-text">¿Ya tienes una cuenta?</p>
+        <a class="btn btn-secondary btn-block" routerLink="/login">Inicia sesión aquí</a>
+      </div>
+      
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
         Signup failed!<br />{{ errorMessage }}
       </div>

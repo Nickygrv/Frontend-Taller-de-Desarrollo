@@ -30,3 +30,25 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+/* Estilos existentes aquí */
+
+.redirect-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.redirect-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
