@@ -1,52 +1,49 @@
 <div class="container">
-    <div class="card card-container mx-auto mt-5">
-      <div class="card-body">
-        <div class="profile-picture">
-          <div *ngIf="user">
-            <img [src]="user.profilePictureUrl || 'default-profile.png'" alt="Profile Picture" class="img-thumbnail"/>
-          </div>          
-          <button (click)="onFileChange($event)" class="btn btn-secondary edit-photo-btn">
-            <i class="fa fa-pencil"></i>
-        </button>
-    </div>
-    <h3>{{ user.name }} {{ user.surname }}</h3>
-    <p><strong>Username:</strong> {{ user.username }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Cell:</strong> {{ user.cell }}</p>
-    <button (click)="goToEditProfile()" class="btn btn-primary">Editar Datos</button>
-    
-    <button (click)="showDeleteConfirmationDialog()" class="btn btn-danger mt-3">Dar de baja mi cuenta</button>
+  <div class="card card-container mx-auto mt-5">
+    <div class="card-body">
+      <div class="profile-picture">
+        <div *ngIf="user">
+          <img [src]="user.profilePictureUrl || 'default-profile.png'" alt="Profile Picture" class="img-thumbnail"/>
+        </div>          
+        <button (click)="onFileChange($event)" class="btn btn-secondary edit-photo-btn">
+          <i class="fa fa-pencil"></i>
+      </button>
   </div>
+  <h3>{{ user.name }} {{ user.surname }}</h3>
+  <p><strong>Username:</strong> {{ user.username }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Cell:</strong> {{ user.cell }}</p>
+  <button (click)="goToEditProfile()" class="btn btn-primary">Editar Datos</button>
+  
+  <button (click)="showDeleteConfirmationDialog()" class="btn btn-danger mt-3">Dar de baja mi cuenta</button>
+</div>
 </div>
 
-<div *ngIf="showDeleteConfirmation" class="modal">
-  <div class="modal-content">
+<div *ngIf="showDeleteConfirmation" class="modal-overlay">
+  <div class="modal">
     <p>¿Seguro que deseas eliminar tu cuenta?</p>
     <button (click)="confirmDelete()" class="btn btn-success">Sí, eliminar cuenta</button>
     <button (click)="cancelDelete()" class="btn btn-danger">Cancelar</button>
   </div>
-  <p>Valor de showDeleteConfirmation: {{ showDeleteConfirmation }}</p>
-
 </div>
 
 <div *ngIf="showDeleteReason" class="modal-overlay">
-  <div class="modal-content">
+  <div class="modal">
     <p>¿Por qué deseas eliminar tu cuenta?</p>
     <form (ngSubmit)="submitDeleteReason()">
       <div class="form-group">
         <label>
-          <input type="checkbox" formControlName="No me gustaron los cursos"/> Razón 1
+          <input type="checkbox" formControlName="reason1"/> No me ayudaron los cursos 
         </label>
         <label>
-          <input type="checkbox" formControlName="Ya lo siento aburrido"/> Razón 2
+          <input type="checkbox" formControlName="reason2"/> Me parece que hay mejores serviccios 
         </label>
         <label>
-          <input type="checkbox" formControlName="Otros"/> Razón 3
+          <input type="checkbox" formControlName="reason3"/> otros motivos
         </label>
-        
       </div>
       <button type="submit" class="btn btn-danger">Eliminar Cuenta</button>
+      <button (click)="cancelDelete()" class="btn btn-danger">Cancelar</button>
     </form>
   </div>
-</div>
 </div>
