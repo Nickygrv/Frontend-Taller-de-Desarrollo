@@ -1,24 +1,24 @@
-label {
-  display: block;
-  margin-top: 10px;
+.form-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Ajusta la altura al 100% de la ventana */
 }
 
 .card-container.card {
   max-width: 400px !important;
   padding: 40px 40px;
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 .card {
-  background-color: #f7f7f7;
+  background-color: rgba(255, 255, 255, 0.5); /* Más transparencia */
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
-  margin-top: 50px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 .profile-img-card {
@@ -26,7 +26,26 @@ label {
   height: 96px;
   margin: 0 auto 10px;
   display: block;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+.form-group label {
+  display: block;
+  margin-top: 10px;
+  color: #fff; /* Cambiar color de texto a blanco para mejor visibilidad */
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.8); /* Un poco más opaco que la tarjeta */
+  color: #000;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 100%;
+}
+
+a.btn-link {
+  color: #fff;
 }
