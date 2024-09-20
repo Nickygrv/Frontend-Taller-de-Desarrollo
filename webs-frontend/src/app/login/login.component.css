@@ -49,3 +49,17 @@ button.btn-primary {
 a.btn-link {
   color: #fff;
 }
+.register-text {
+  text-align: center;
+  color: #fff; /* Cambiar el color según el diseño */
+  margin: 10px 0;
+}
+.btn-secondary {
+  background-color: #343a40; /* Azul noche */
+  border-color: #343a40;
+}
+
+.btn-secondary:hover {
+  background-color: #23272b; /* Un tono más oscuro para el hover */
+  border-color: #1d2124;
+}
