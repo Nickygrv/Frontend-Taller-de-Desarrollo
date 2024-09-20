@@ -1,24 +1,24 @@
 .form-container {
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Ajusta la altura al 100% de la ventana */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
 }
 
 .card-container.card {
   max-width: 400px !important;
   padding: 40px 40px;
-  background-color: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.5); /* Más transparencia */
+  background-color: rgba(255, 255, 255, 0.5); 
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img-card {
@@ -32,11 +32,11 @@
 .form-group label {
   display: block;
   margin-top: 10px;
-  color: #fff; /* Cambiar color de texto a blanco para mejor visibilidad */
+  color: #fff; 
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0.8); /* Un poco más opaco que la tarjeta */
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 

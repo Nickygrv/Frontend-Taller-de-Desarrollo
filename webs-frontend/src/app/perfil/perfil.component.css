@@ -1,134 +1,163 @@
-y este su css
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-image-container {
-    position: relative;
-    width: 150px;
-     height: 150px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-  }
-  
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
-  }
-  
-  .edit-profile-btn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .profile-details {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .profile-details h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .profile-details p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la vista */
-  }
-  
-  .card-container {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .profile-picture {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .profile-picture img {
-    width: 120px; /* Tamaño de la foto */
-    height: 120px; /* Tamaño de la foto */
-    border-radius: 50%; /* Hace la foto circular */
-    object-fit: cover; /* Mantiene la proporción y cubre el área del círculo */
-  }
-  
-  .edit-photo-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-    border-radius: 50%;
-    padding: 5px;
-  }
-  .modal {
-    display: block; /* Muestra el modal */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Asegúrate de que el modal esté sobre otros elementos */
-  }
-  
-  .modal-overlay {
-    display: block; /* Muestra la capa de fondo */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Asegúrate de que la capa de fondo esté debajo del modal */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: rgba(249, 249, 249, 0.8); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.edit-profile-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-details h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.profile-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.card-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-picture {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture img {
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.edit-photo-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+}
+
+.modal-overlay {
+  display: block; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+}
+
+.modal-overlay {
+  display: block; /* Muestra la capa de fondo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Asegúrate de que la capa de fondo esté debajo del modal */
+}
+
+.modal {
+  display: block; /* Muestra el modal */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegúrate de que el modal esté sobre otros elementos */
+}
+
+.small-modal {
+  width: 300px; /* Ancho del modal */
+  text-align: center; /* Centrar el texto dentro del modal */
+}
