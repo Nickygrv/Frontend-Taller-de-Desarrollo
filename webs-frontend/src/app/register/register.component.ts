@@ -10,21 +10,23 @@ export class RegisterComponent implements OnInit {
   form: any = {
     username: null,
     email: null,
-    password: null
+    password: null,
+    dob: null // Añadir el campo de Fecha de Nacimiento
   };
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
   emailExistsMessage: string = '';
+
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    const { username, email, name, lastname,phone, password } = this.form;
+    const { username, email, name, lastname, phone, password, dob } = this.form;
 
-    this.authService.register(username, email, name, lastname, phone, password).subscribe({
+    this.authService.register(username, email, name, lastname, phone, password, dob).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
@@ -35,6 +37,7 @@ export class RegisterComponent implements OnInit {
         this.isSignUpFailed = true;
       }
     });
+
     this.authService.verificarCorreo(this.form.email).subscribe(
       (data) => {
         if (data.registrado) {

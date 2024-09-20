@@ -9,9 +9,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-cancelDeleteAndGoToProfile() {
-throw new Error('Method not implemented.');
-}
   user: any={};
   showDeleteConfirmation: boolean = false;
   showDeleteReason: boolean = false;

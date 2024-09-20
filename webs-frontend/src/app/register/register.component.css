@@ -9,7 +9,7 @@ label {
 }
 
 .card {
-  background-color: rgba(247, 247, 247, 0.8); 
+  background-color: rgba(247, 247, 247, 0.8); /* Color con transparencia */
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   margin-top: 50px;
@@ -46,4 +46,8 @@ label {
 .btn-secondary:hover {
   background-color: #5a6268;
   border-color: #545b62;
+}
+input[type="date"] {
+  display: block;
+  margin-top: 10px;
 }
