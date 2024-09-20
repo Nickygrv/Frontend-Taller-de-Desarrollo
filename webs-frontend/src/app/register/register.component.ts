@@ -22,9 +22,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { username, email, password } = this.form;
+    const { username, email, name, lastname,phone, password } = this.form;
 
-    this.authService.register(username, email, password).subscribe({
+    this.authService.register(username, email, name, lastname, phone, password).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
@@ -41,7 +41,6 @@ export class RegisterComponent implements OnInit {
           this.emailExistsMessage = 'Este correo ya está registrado.';
         } else {
           this.emailExistsMessage = '';
-          // Continuar con el registro
           console.log('Registrar nuevo usuario');
         }
       },
